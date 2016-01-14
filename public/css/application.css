@@ -1,16 +1,16 @@
-/*.body {
-  background-color: #212121;
-}*/
-
 @font-face {
-  font-family: 'dnd';
-  src: url('/fonts/dnd.ttf');
+  font-family: 'triforce';
+  src: url('/fonts/Triforce.ttf');
 }
+.bckgrd-landing {
+  background-image: url('/images/master.jpg');
+}
+
 #title {
   margin-bottom: .25em;
-  font-size: 4.5em;
-  font-family: 'dnd';
-  color: #7B3F00;
+  font-size: 5em;
+  font-family: 'triforce';
+  color: #E0DD0B;
 }
 .wrapper {
   width: 100%;
@@ -25,12 +25,14 @@
   margin: 0 auto;
 }
 .search-box {
-  width: 266px;
-  height: 26px;
+  width: 250px;
+  height: 30px;
+  padding: 5px 2px;
 }
 .search-button {
+  font-family: 'triforce';
   margin-top:   1em;
 }
 .btn-pad {
-  padding: 6px;
+  padding: 5px 8px;
 }

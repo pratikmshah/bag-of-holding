@@ -1,9 +1,24 @@
 /*.body {
   background-color: #212121;
 }*/
+
+@font-face {
+  font-family: 'halo';
+  src: url('/fonts/Halo3.ttf');
+}
+#title {
+  margin-bottom: .25em;
+  font-size: 4.5em;
+  font-family: 'halo';
+  color: #7B3F00;
+}
 .wrapper {
   width: 100%;
   height: 100%
+}
+.content-center {
+  text-align: center;
+  margin-top: 20%;
 }
 .search-form {
   width: 100%;
@@ -12,4 +27,10 @@
 .search-box {
   width: 266px;
   height: 26px;
+}
+.search-button {
+  margin-top:   1em;
+}
+.btn-pad {
+  padding: 6px;
 }

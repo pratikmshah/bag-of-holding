@@ -1,1 +1,18 @@
-<%= puts @z %>
+<% @y.each do |category, items| %>
+  <% if items.is_a? Array %>
+  <h3><%=  category %></h3>
+  <%       items.each do |item| %>
+   <%=         "#{item}" %>
+   <br>
+   <%       end %>
+   <%     elsif items.is_a? Hash %>
+   <%=       category %>
+   <%       items.each do |itemkey, itemvalue| %>
+   <%=         "#{itemkey}: #{itemvalue}" %>
+   <br>
+   <%       end %>
+   <%     else %>
+   <%=       "#{category}: #{items}" %>
+   <br>
+   <%     end %>
+ <% end %>

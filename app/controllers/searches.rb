@@ -1,12 +1,11 @@
 get '/searches/new' do
-  erb :'/searches/new'
+  erb :'/index'
 end
 
-get '/searches' do
-  params[:search]
-  x = generate_response(params[:search])
-  y = access_response_result(x)
-  @z = display_data(y)
+post '/searches' do
+  x = generate_response(params[:game_name], params[:console])
+  @y = access_response_result(x)
+
   erb :blah
   #erb :'/searches/create'
 end

@@ -3,9 +3,8 @@ get '/searches/new' do
 end
 
 post '/searches' do
-  x = generate_response(params[:game_name], params[:console])
-  @y = access_response_result(x)
+  data = generate_response(params[:game_name], params[:console])
+  @y = access_response_result(data)
 
-  erb :blah
-  #erb :'/searches/create'
+  erb :'/searches/create'
 end

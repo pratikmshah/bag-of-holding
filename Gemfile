@@ -9,7 +9,7 @@ gem 'sinatra-contrib'
 
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
-
+gem 'unirest'
 gem 'rake'
 
 gem 'rack', '1.6.4'

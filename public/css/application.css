@@ -3,13 +3,13 @@
 }*/
 
 @font-face {
-  font-family: 'halo';
-  src: url('/fonts/Halo3.ttf');
+  font-family: 'dnd';
+  src: url('/fonts/dnd.ttf');
 }
 #title {
   margin-bottom: .25em;
   font-size: 4.5em;
-  font-family: 'halo';
+  font-family: 'dnd';
   color: #7B3F00;
 }
 .wrapper {

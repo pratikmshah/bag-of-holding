@@ -6,6 +6,7 @@ post '/searches' do
   @data = generate_response(params[:game_name], params[:console])
   if @data != nil && @data.body["message"] == nil
     @results = access_response_result(@data)
+    p @results
     erb :'/searches/create'
   else
     erb :'/searches/error'

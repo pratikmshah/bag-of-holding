@@ -1,14 +1,13 @@
 <body class="bckgrd-results fnt-clr result-font">
   <div class="result-container">
-    <div><img src=""></div>
     <div id="results" class="center">
       <% @results.each do |category, items| %>
         <% if items.is_a? Array %>
           <h3 class="fnt-head-clr"><%= category.capitalize %></h3>
           <% items.each do |item| %>
             <%= "#{item}" %>
-            <br>
           <% end %>
+          <br>
          <% elsif items.is_a? Hash %>
           <%= category %>
           <% items.each do |itemkey, itemvalue| %>

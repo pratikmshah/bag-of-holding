@@ -12,8 +12,12 @@
          <% elsif items.is_a? Hash %>
           <%= category %>
           <% items.each do |itemkey, itemvalue| %>
-            <%= "#{itemkey}: #{itemvalue}" %>
-            <br>
+            <% if itemkey.include?("not find game") %>
+              <% next %>
+            <% else %>
+              <%= "#{itemkey}: #{itemvalue}" %>
+              <br>
+            <% end %>
           <% end %>
          <% else %>
           <%= "#{category}: #{items}" %>

@@ -12,6 +12,14 @@
   -o-background-size: cover;
   background-size: cover;
 }
+.bckgrd-fail {
+  background-image: url('/images/error.png');
+  background-color: red;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 /* LANDING PAGE */
 #title {
@@ -50,12 +58,13 @@
 
 
 /* RESULTS PAGE */
-#results {
-/*  background-color: white;
+#fail {
+  background-color: white;
   opacity: .40;
-  min-width: 25%;
-  max-width: 30%;
-  margin: 0 auto;*/
+  min-width: 15%;
+  max-width: 20%;
+  margin: auto;
+  margin-top: 23%;
 }
 .fnt-clr {
   color: white;

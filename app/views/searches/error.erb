@@ -1,15 +1,18 @@
-<div class="errors">
-  <h1>Ya dun guffed!</h1>
-  Try one of these...
-  <br>
-  <%if @data.body["possibleChoices"].empty? == false %>
-    <% @data.body["possibleChoices"].each do |choice| %>
-    <%= choice  %>
-    <br>
-    <%end%>
-  <%else%>
-    No suggestions here. Maybe try a different search?
-    <br>
-  <% end %>
-  <a href='/'>Play the Song of Time</a>
-</div>
+<body class="bckgrd-fail">
+  <div class="errors-container">
+    <div class="error content-center fnt-clr">
+      Try one of these...
+      <br>
+      <%if @data.body["possibleChoices"].empty? == false %>
+        <% @data.body["possibleChoices"].each do |choice| %>
+        <%= choice  %>
+        <br>
+        <%end%>
+      <%else%>
+        No suggestions here. Maybe try a different search?
+        <br>
+      <% end %>
+      <a href='/'>Play the Song of Time</a>
+    </div>
+  </div>
+</body>

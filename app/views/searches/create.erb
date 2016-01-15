@@ -11,11 +11,16 @@
          <% elsif items.is_a? Hash %>
           <%= category %>
           <% items.each do |itemkey, itemvalue| %>
-            <% if itemkey.include?("not find game") %>
+            <% if itemkey.include?("not find game") || itemvalue == 0%>
               <% next %>
             <% else %>
-              <%= "#{itemkey}: #{itemvalue}" %>
-              <br>
+              <% if itemvalue.include?("http://") %>
+                <a href="<%= itemvalue %>">Link to review</a>
+                <br>
+              <% else %>
+                <%= "#{itemkey}: #{itemvalue}" %>
+               <br>
+              <% end %>
             <% end %>
           <% end %>
          <% else %>

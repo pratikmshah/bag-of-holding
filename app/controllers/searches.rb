@@ -1,6 +1,6 @@
-get '/searches' do
-  erb :'searches/index'
-end
+# get '/searches' do
+#   erb :'searches/index'
+# end
 
 get '/searches/new' do
   erb :'searches/new'

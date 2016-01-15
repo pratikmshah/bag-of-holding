@@ -15,10 +15,7 @@
 .bckgrd-fail {
   background-image: url('/images/error.png');
   background-color: red;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
 }
 
 /* LANDING PAGE */

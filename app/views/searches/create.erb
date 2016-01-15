@@ -1,18 +1,31 @@
-<% @y.each do |category, items| %>
-  <% if items.is_a? Array %>
-  <h3><%=  category %></h3>
-  <%       items.each do |item| %>
-   <%=         "#{item}" %>
-   <br>
-   <%       end %>
-   <%     elsif items.is_a? Hash %>
-   <%=       category %>
-   <%       items.each do |itemkey, itemvalue| %>
-   <%=         "#{itemkey}: #{itemvalue}" %>
-   <br>
-   <%       end %>
-   <%     else %>
-   <%=       "#{category}: #{items}" %>
-   <br>
-   <%     end %>
- <% end %>
+<body class="bckgrd-results fnt-clr result-font">
+  <div class="result-container">
+    <div id="results" class="center">
+      <% @results.each do |category, items| %>
+        <% if items.is_a? Array %>
+          <h3 class="fnt-head-clr"><%= category.capitalize %></h3>
+          <% items.each do |item| %>
+            <%= "#{item}" %>
+          <% end %>
+          <br>
+         <% elsif items.is_a? Hash %>
+          <%= category %>
+          <% items.each do |itemkey, itemvalue| %>
+            <% if itemkey.include?("not find game") %>
+              <% next %>
+            <% else %>
+              <%= "#{itemkey}: #{itemvalue}" %>
+              <br>
+            <% end %>
+          <% end %>
+         <% else %>
+          <%= "#{category}: #{items}" %>
+          <br>
+         <% end %>
+       <% end %>
+    </div>
+   </div>
+   <div class="result-container">
+    <a href="/index" class="return">%</a>
+   </div>
+</body>
